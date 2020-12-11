@@ -28,12 +28,12 @@ pre2 =   avoidance*3.9246754+   anxiety*9.7102446-28.4573220; % 专注维度
 dis2 =   avoidance*7.3654621+   anxiety*4.9392039-22.22810880; % 冷淡维度
 
 %% 输出
-fprintf('回避维度得分为 %.1d;\n',avoidance)
-fprintf('焦虑维度得分为 %.1d;\n',anxiety)
-fprintf('安全维度得分为 %.1d;\n',sec2)
-fprintf('惧怕维度得分为 %.1d;\n',fear2)
-fprintf('专注维度得分为 %.1d;\n',pre2)
-fprintf('冷淡维度得分为 %.1d;\n',dis2)
+fprintf('回避维度得分为 %.1f;\n',avoidance)
+fprintf('焦虑维度得分为 %.1f;\n',anxiety)
+fprintf('安全维度得分为 %.1f;\n',sec2)
+fprintf('惧怕维度得分为 %.1f;\n',fear2)
+fprintf('专注维度得分为 %.1f;\n',pre2)
+fprintf('冷淡维度得分为 %.1f;\n',dis2)
 fprintf('依恋类型：')
 if sec2==max([sec2,fear2,pre2,dis2])
     att2=1;
@@ -51,3 +51,15 @@ if dis2==max([sec2,fear2,pre2,dis2])
     att2=4;
     fprintf('冷漠型')
 end
+fprintf('\n')
+
+% 预期输出样式
+%{
+回避维度得分为 2.4;
+焦虑维度得分为 2.1;
+安全维度得分为 7.8;
+惧怕维度得分为 2.1;
+专注维度得分为 1.1;
+冷淡维度得分为 5.9;
+依恋类型：安全型
+%}
